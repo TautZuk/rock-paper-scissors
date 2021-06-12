@@ -35,37 +35,14 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    
+    while (timesPlayed <= 4) {
     computerSelection = computerPlay();
     playerSelection = prompt("Choose: Rock, Paper or Scissors!");
     playerSelection = playerSelection.toLowerCase();
     playRound(playerSelection, computerSelection);
     console.log("Player Score:" + playerScore + " Computer Score:" + computerScore);
-
-    computerSelection = computerPlay();
-    playerSelection = prompt("Choose: Rock, Paper or Scissors!");
-    playerSelection = playerSelection.toLowerCase();
-    playRound(playerSelection, computerSelection);
-    console.log("Player Score:" + playerScore + " Computer Score:" + computerScore);
-
-    computerSelection = computerPlay();
-    playerSelection = prompt("Choose: Rock, Paper or Scissors!");
-    playerSelection = playerSelection.toLowerCase();
-    playRound(playerSelection, computerSelection);
-    console.log("Player Score:" + playerScore + " Computer Score:" + computerScore);
-
-    computerSelection = computerPlay();
-    playerSelection = prompt("Choose: Rock, Paper or Scissors!");
-    playerSelection = playerSelection.toLowerCase();
-    playRound(playerSelection, computerSelection);
-    console.log("Player Score:" + playerScore + " Computer Score:" + computerScore);
-
-    computerSelection = computerPlay();
-    playerSelection = prompt("Choose: Rock, Paper or Scissors!");
-    playerSelection = playerSelection.toLowerCase();
-    playRound(playerSelection, computerSelection);
-    console.log("Player Score:" + playerScore + " Computer Score:" + computerScore);
-
+    timesPlayed += 1;
+}
     if (playerScore > computerScore) {
         console.log ("Player wins!");
     }else if (playerScore < computerScore) {
@@ -76,3 +53,4 @@ function game() {
 }
 let playerScore = 0;
 let computerScore = 0;
+let timesPlayed = 0;
