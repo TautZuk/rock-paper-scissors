@@ -11,56 +11,60 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == "rock" && computerSelection == "paper") {
-        computerScore += 1;
-        console.log("You lose! Paper beats rock!")
+        return computerScore += 1;
+
     } else if (playerSelection == "rock" && computerSelection == "scissors"){
-        playerScore += 1;
-        console.log("You win! Rock beats Scissors!")
+        return playerScore += 1;
+
     } else if (playerSelection == "paper" && computerSelection == "rock"){
-        playerScore += 1;
-        console.log("You win! Paper beats Rock!")
+        return playerScore += 1;
+
     }else if (playerSelection == "paper" && computerSelection == "scissors"){
-        computerScore += 1;
-        console.log("You Lose! Scissors beats Paper!")
+        return computerScore += 1;
+
     }else if (playerSelection == "scissors" && computerSelection == "paper"){
-        playerScore += 1;
-        console.log("You win! Scissors beats Paper!")
+        return playerScore += 1;
+
     }else if (playerSelection == "scissors" && computerSelection == "rock"){
-        computerScore += 1;
-        console.log("You Lose! Rock beats Scissors!")
+        return computerScore += 1;
+
     } else {
-        console.log("It's a tie!")
+        console.log("It's a tie!");
     }
 
 }
 
 function game() {
+    
     computerSelection = computerPlay();
-
-    playerSelection = prompt("Choose: Rock, Paper or Scissors!")
+    playerSelection = prompt("Choose: Rock, Paper or Scissors!");
     playerSelection = playerSelection.toLowerCase();
     playRound(playerSelection, computerSelection);
-    console.log("Player Score:" + playerScore + " Computer Score:" + computerScore)
+    console.log("Player Score:" + playerScore + " Computer Score:" + computerScore);
 
-    playerSelection = prompt("Choose: Rock, Paper or Scissors!")
+    computerSelection = computerPlay();
+    playerSelection = prompt("Choose: Rock, Paper or Scissors!");
     playerSelection = playerSelection.toLowerCase();
     playRound(playerSelection, computerSelection);
-    console.log("Player Score:" + playerScore + " Computer Score:" + computerScore)
+    console.log("Player Score:" + playerScore + " Computer Score:" + computerScore);
 
-    playerSelection = prompt("Choose: Rock, Paper or Scissors!")
+    computerSelection = computerPlay();
+    playerSelection = prompt("Choose: Rock, Paper or Scissors!");
     playerSelection = playerSelection.toLowerCase();
     playRound(playerSelection, computerSelection);
-    console.log("Player Score:" + playerScore + " Computer Score:" + computerScore)
+    console.log("Player Score:" + playerScore + " Computer Score:" + computerScore);
 
-    playerSelection = prompt("Choose: Rock, Paper or Scissors!")
+    computerSelection = computerPlay();
+    playerSelection = prompt("Choose: Rock, Paper or Scissors!");
     playerSelection = playerSelection.toLowerCase();
     playRound(playerSelection, computerSelection);
-    console.log("Player Score:" + playerScore + " Computer Score:" + computerScore)
+    console.log("Player Score:" + playerScore + " Computer Score:" + computerScore);
 
-    playerSelection = prompt("Choose: Rock, Paper or Scissors!")
+    computerSelection = computerPlay();
+    playerSelection = prompt("Choose: Rock, Paper or Scissors!");
     playerSelection = playerSelection.toLowerCase();
     playRound(playerSelection, computerSelection);
-    console.log("Player Score:" + playerScore + " Computer Score:" + computerScore)
+    console.log("Player Score:" + playerScore + " Computer Score:" + computerScore);
 
     if (playerScore > computerScore) {
         console.log ("Player wins!");
