@@ -29,28 +29,34 @@ function playRound(playerSelection, computerSelection) {
         return computerScore += 1;
 
     } else {
-        console.log("It's a tie!");
+        return;
     }
 
 }
-
-function game() {
-    while (timesPlayed <= 4) {
-    computerSelection = computerPlay();
-    playerSelection = prompt("Choose: Rock, Paper or Scissors!");
-    playerSelection = playerSelection.toLowerCase();
-    playRound(playerSelection, computerSelection);
-    console.log("Player Score:" + playerScore + " Computer Score:" + computerScore);
-    timesPlayed += 1;
-}
-    if (playerScore > computerScore) {
-        console.log ("Player wins!");
-    }else if (playerScore < computerScore) {
-        console.log ("Computer wins!");
-    }else {
-        console.log ("It's a tie!");
-    }
-}
-let playerScore = 0;
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', game)
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', game)
+const scissors = document.querySelector('#scissors');
+scissors.addEventListener('click', game)
 let computerScore = 0;
-let timesPlayed = 0;
+let playerScore = 0;
+const results = document.querySelector('#results')
+const result = document.createElement('div');
+results.appendChild(result);
+ function game() {
+    computerSelection = computerPlay();
+    let playerSelection = this.id;
+    console.log(playerSelection);
+    console.log(computerSelection);
+    playRound(playerSelection, computerSelection);
+    console.log(playerScore);
+    console.log(computerScore);
+    
+    result.textContent = "Player Score: " + playerScore + " Computer Score: " + computerScore;
+
+    
+
+}
+
+
