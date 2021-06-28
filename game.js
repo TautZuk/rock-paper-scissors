@@ -43,6 +43,7 @@ let computerScore = 0;
 let playerScore = 0;
 const results = document.querySelector('#results')
 const result = document.createElement('div');
+result.textContent = "Player Score: " + playerScore + " Computer Score: " + computerScore;
 results.appendChild(result);
  function game() {
     computerSelection = computerPlay();
