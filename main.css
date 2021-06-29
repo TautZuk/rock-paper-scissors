@@ -1,0 +1,34 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: green;
+  font-size: 3em;
+  text-align: center;
+  border: solid 3px;
+  padding: 5px 10px;
+}
+p, #results {
+  color: green;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+button {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.buttons {
+  margin: 2em;
+}
