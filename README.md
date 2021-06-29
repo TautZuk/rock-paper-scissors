@@ -1,3 +1,9 @@
 # rock-paper-scissors
-Second project from The Odin Project Curriculum. Making Rock, Paper, Scissors game using Javascript. Game is made to work in browser console. Making use of functions and loops.
+Second project from The Odin Project Curriculum. Making Rock, Paper, Scissors game using HTML, CSS & Javascript.
+Made use of:
+- Functions
+- Loops
+- DOM manipulation
+- Events
 
+Also learned how to make and work on a branch, merge it back to main.
