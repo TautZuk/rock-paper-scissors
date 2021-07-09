@@ -7,3 +7,5 @@ Made use of:
 - Events
 
 Also learned how to make and work on a branch, merge it back to main.
+
+Live at: https://tautzuk.github.io/rock-paper-scissors/
